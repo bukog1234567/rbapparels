@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>RB Apparels</name>
+	<supportedVersions>
+		<li>1.6</li>
+		<li>1.7</li>
+	</supportedVersions>
+	<modVersion>v1.0</modVersion>
+	<packageId>1234567.rbapparels</packageId>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.royalty</li>
+		<li>Ludeon.RimWorld.ideology</li>
+		<li>Ludeon.RimWorld.biotech</li>
+		<li>Ludeon.RimWorld.anomaly</li>
+		<li>Ludeon.RimWorld.oddysey </li>
+		<li>Nals.Realisticbody</li>
+	</loadAfter>
+	<author>bukog</author>
+	<description>
+DESCRIPTION:
+	This mod adds some SizedApparel-compatible apparel for NL's realistic body.
+	Outfits are modular and categorized into sets
+	Note: I haven't started version 1.7 but apparently it should be compatible with most mods so I included it in supported versions. Personally, I'm going to wait until official release.
+	
+HARD REQUIREMENTS:
+	Nal's Realistic Body
+		URL: https://steamcommunity.com/sharedfiles/filedetails/?id=2820615654
+		
+SOFT REQUIREMENTS:
+	SizedApparel-Realistic body -> Adds Sized Apparel mechanics to Realistic Bodies. Compatible and HIGHLY RECOMMENDED with this mod.
+		URL: https://gitgud.io/Talos/sizedapparel-realistic-body
+	
+RECOMMENDED:
+	Skimpy Clothes for Nal's Realistic Body -> Adds great clothing for Realistic Body. This mod (RB Apparels) adds swimsuit and shibari textures (as of the moment).
+		URL: https://steamcommunity.com/sharedfiles/filedetails/?id=3220388881
+	SizedApparel-Realistic Body-More Apparels -> Adds Sized Apparel Bunnysuits from Skimpy Clothes
+		URL: https://gitgud.io/Alxgry/sized-apparel-realistic-body-more-apparels
+	THIGAPPE -> Autofitting for other clothes, generally not SA compatible but looks good
+		URL: https://steamcommunity.com/sharedfiles/filedetails/?id=2839518933
+	Layered Apparel -> allows you to use specific outfits as cosmetics and even combines those that aren't usually equippable together
+		URL: https://steamcommunity.com/sharedfiles/filedetails/?id=3632480044
+		
+Changelog
+v1.0
+- Added thin textures for ALL currently released apparel
+- Added New Crafting Workbench (to prevent clutter in default tailoring bench)
+- Added Apparel Effects (Stat Offsets)
+- Added New Type of Clothing Sets:
+	> (Bikini) Armor
+	> Military Set
+	> (Colorable) Reverse Outfit
+	> Shiny Bikini - color version of gold bikini
+- Added New Accessories:
+	> Cow Ears and Tail
+	> Bell Collar
+	> Colored Bunny Ears
+- Changed Textures:
+	> Nun Set - also now with colors
+	> Golden Bikini
+	> Collar and Tie
+	> Collar and Ribbon
+- Changed Item Name Formats
+- Changed Crafting Recipes and Cost to balance for stat effects
+- Changed Base Stats
+- Completed Descriptions
+- Optimized and rewrote XML
+	</description>
+</ModMetaData>

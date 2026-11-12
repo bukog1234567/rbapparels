@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs> 
+	<ThingDef Name="PastiesTorsoOSBase" Abstract="True">
+		<thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<tickerType>Never</tickerType>
+			
+			<recipeMaker>
+			  <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			  <workSkill>Crafting</workSkill>
+			  <effectWorking>Tailor</effectWorking>
+			  <soundWorking>Recipe_Tailor</soundWorking>
+			  <skillRequirements>
+				<Crafting>3</Crafting>
+			  </skillRequirements>
+			  <recipeUsers>
+				<li>RBACraft</li>
+			  </recipeUsers>
+			</recipeMaker>
+			
+	        <costStuffCount>50</costStuffCount>
+			<stuffCategories>
+				<li>Fabric</li>
+				<li>Leathery</li>
+				<li>Metallic</li>
+			</stuffCategories>
+			
+			<thingCategories>
+				<li>Apparel</li>
+			</thingCategories>
+			
+			<statBases>
+				<MaxHitPoints>100</MaxHitPoints>
+				<WorkToMake>300</WorkToMake>
+				<Mass>0.05</Mass>
+				<StuffEffectMultiplierArmor>0.05</StuffEffectMultiplierArmor>
+				<StuffEffectMultiplierInsulation_Cold>0.05</StuffEffectMultiplierInsulation_Cold>
+				<StuffEffectMultiplierInsulation_Heat>0.05</StuffEffectMultiplierInsulation_Heat>
+				<EquipDelay>1</EquipDelay>
+			</statBases>
+			
+			<equippedStatOffsets>
+				<TradePriceImprovement>0.05</TradePriceImprovement>
+				<NegotiationAbility>0.05</NegotiationAbility>
+				<PawnBeauty>1</PawnBeauty>
+			</equippedStatOffsets>
+			
+			<apparel>
+				<bodyPartGroups>
+					<li>Torso</li>
+				</bodyPartGroups>
+				<layers>
+					<li>OnSkin</li>
+				</layers>
+				<tags>
+					<li></li>
+				</tags>
+				<defaultOutfitTags>
+					<li>Worker</li>
+					<li>Soldier</li>
+				</defaultOutfitTags>
+				<canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+				<countsAsClothingForNudity>true</countsAsClothingForNudity>
+			</apparel>
+			<colorGenerator Class="ColorGenerator_StandardApparel" />
+			<comps>
+			<li Class="CompProperties_Forbiddable" />
+			</comps>
+			<modExtensions>
+				<li Class="BodyTypeApparelRestrictions.ApparelBodyTypeExtension">
+				<allowedBodyTypes>
+					<li>Female</li>
+					<li>Thin</li>
+				</allowedBodyTypes>
+				</li>
+			</modExtensions>
+	</ThingDef>
+	
+	<ThingDef Name="ReverseOSBase" Abstract="True">
+        <thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<tickerType>Never</tickerType>
+
+        <recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Tailor</effectWorking>
+			<soundWorking>Recipe_Tailor</soundWorking>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+			<recipeUsers>
+				<li>RBACraft</li>
+			</recipeUsers>
+        </recipeMaker>
+
+        <costStuffCount>100</costStuffCount>
+        <stuffCategories>
+          <li>Fabric</li>
+		  <li>Leathery</li>
+		  <li>Metallic</li>
+        </stuffCategories>
+		
+        <thingCategories>
+          <li>Apparel</li>
+        </thingCategories>
+		
+        <statBases>
+          <MaxHitPoints>200</MaxHitPoints>
+          <WorkToMake>1800</WorkToMake>
+          <Mass>0.4</Mass>
+          <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+          <StuffEffectMultiplierInsulation_Cold>0.6</StuffEffectMultiplierInsulation_Cold>
+          <StuffEffectMultiplierInsulation_Heat>0.4</StuffEffectMultiplierInsulation_Heat>
+          <EquipDelay>1</EquipDelay>
+        </statBases>
+		
+		<equippedStatOffsets>
+			<TradePriceImprovement>0.05</TradePriceImprovement>
+			<NegotiationAbility>0.05</NegotiationAbility>
+		</equippedStatOffsets>
+		
+        <apparel>
+          <bodyPartGroups>
+			<li>Arms</li>
+			<li>Legs</li>
+          </bodyPartGroups>
+          <layers>
+            <li>OnSkin</li>
+          </layers>
+          <tags>
+            <li></li>
+          </tags>
+          <defaultOutfitTags>
+            <li>Worker</li>
+            <li>Soldier</li>
+          </defaultOutfitTags>
+          <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		  <countsAsClothingForNudity>true</countsAsClothingForNudity>
+        </apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+		</comps>
+		<modExtensions>
+			<li Class="BodyTypeApparelRestrictions.ApparelBodyTypeExtension">
+			<allowedBodyTypes>
+				<li>Female</li>
+				<li>Thin</li>
+			</allowedBodyTypes>
+			</li>
+		</modExtensions>
+		
+    </ThingDef>
+	
+	<ThingDef Name="RDetachedCollarBase" Abstract="True">
+        <thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<tickerType>Never</tickerType>
+		
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Tailor</effectWorking>
+			<soundWorking>Recipe_Tailor</soundWorking>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+			<recipeUsers>
+				<li>RBACraft</li>
+			</recipeUsers>
+        </recipeMaker>
+
+        <costStuffCount>30</costStuffCount>
+        <stuffCategories>
+          <li>Fabric</li>
+          <li>Leathery</li>
+        </stuffCategories>
+		
+        <thingCategories>
+          <li>Apparel</li>
+        </thingCategories>
+		
+        <statBases>
+          <MaxHitPoints>100</MaxHitPoints>
+          <WorkToMake>500</WorkToMake>
+          <Mass>0.1</Mass>
+          <StuffEffectMultiplierArmor>0.05</StuffEffectMultiplierArmor>
+          <StuffEffectMultiplierInsulation_Cold>0.02</StuffEffectMultiplierInsulation_Cold>
+          <StuffEffectMultiplierInsulation_Heat>0.01</StuffEffectMultiplierInsulation_Heat>
+          <EquipDelay>1</EquipDelay>
+        </statBases>
+
+        <apparel>
+          <bodyPartGroups>
+			<li>Neck</li>
+          </bodyPartGroups>
+          <layers>
+            <li>Middle</li>
+          </layers>
+          <tags>
+            <li></li>
+          </tags>
+          <defaultOutfitTags>
+            <li>Worker</li>
+            <li>Soldier</li>
+          </defaultOutfitTags>
+          <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		  <countsAsClothingForNudity>true</countsAsClothingForNudity>
+        </apparel>
+
+        <colorGenerator Class="ColorGenerator_StandardApparel" />
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+		</comps>
+		<modExtensions>
+			<li Class="BodyTypeApparelRestrictions.ApparelBodyTypeExtension">
+			<allowedBodyTypes>
+				<li>Female</li>
+				<li>Thin</li>
+			</allowedBodyTypes>
+			</li>
+		</modExtensions>
+    </ThingDef>
+	
+<!-- CHILD DEFS -->
+	
+	<ThingDef ParentName="PastiesTorsoOSBase">
+        <defName>BlPas</defName>
+        <label>Reverse - Black Pasties</label>
+        <description>Part of the Reverse Series. A set of black and rubbery heart pasties glued onto the nipples and genitals, but the wearer is still practically nude. It is meant to be combined with the black reverse outfit and black bunny ears as a set, often seen in adult entertainment shops all over the galaxy.</description>
+		<graphicData>
+			<texPath>Things/Apparel/Reverse/BPas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<apparel>
+			<wornGraphicPath>Things/Apparel/Reverse/BPas</wornGraphicPath>
+			<useWornGraphicMask>true</useWornGraphicMask>
+		</apparel>
+    </ThingDef>
+
+	<ThingDef ParentName="PastiesTorsoOSBase">
+        <defName>HPas</defName>
+        <label>Reverse - Heart Pasties</label>
+        <description>Part of the Reverse Series. A set of dyable heart pasties glued onto the nipples and genitals, but the wearer is still practically nude. Where there is a heart, there is something worth protecting.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Reverse/HPas</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<apparel>
+			<wornGraphicPath>Things/Apparel/Reverse/HPas</wornGraphicPath>
+			<useWornGraphicMask>false</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+	
+	<ThingDef ParentName="PastiesTorsoOSBase">
+        <defName>CPas</defName>
+        <label>Reverse - Circle Pasties</label>
+        <description>Part of the Reverse Series. A set of dyable circular pasties glued onto the nipples and genitals, but the wearer is still practically nude.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Reverse/CPas</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <apparel>
+           <wornGraphicPath>Things/Apparel/Reverse/CPas</wornGraphicPath>
+		  <useWornGraphicMask>false</useWornGraphicMask>
+         </apparel>
+    </ThingDef>
+
+	<ThingDef ParentName="PastiesTorsoOSBase">
+        <defName>QPas</defName>
+        <label>Reverse - Spade Pasties</label>
+        <description>Part of the Reverse Series. A set of dyable spade pasties glued onto the nipples and genitals, but the wearer is still practically nude.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Reverse/QPas</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <apparel>
+           <wornGraphicPath>Things/Apparel/Reverse/QPas</wornGraphicPath>
+		  <useWornGraphicMask>false</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+
+	<ThingDef ParentName="ReverseOSBase">
+        <defName>RevBl</defName>
+        <label>Reverse - Black Sleeves and Leggings</label>
+        <description>Part of the Reverse Series. A black and shiny reverse outfit that can be worn as-is or combined with other parts. It is meant to be combined with black pasties and black bunny ears as a set, often seen in adult entertainment shops all over the galaxy.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Reverse/RevBlk</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Reverse/RevBlk</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+
+	<ThingDef ParentName="ReverseOSBase">
+        <defName>RevC</defName>
+        <label>Reverse - Sleeves and Leggings</label>
+        <description>Part of the Reverse Series. A shiny reverse outfit that can be worn as-is or combined with other parts. Everything meant to be hidden is out in the open, while everything meant to be out in the open is hidden.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Reverse/RevC</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Reverse/RevC</wornGraphicPath>
+		  <useWornGraphicMask>false</useWornGraphicMask>
+         </apparel>
+    </ThingDef>
+
+	<ThingDef ParentName="RDetachedCollarBase">
+        <defName>RevDC</defName>
+        <label>Reverse - Collar and Tie</label>
+        <description>Part of the Reverse Series. A detached collar with a necktie signifying that the wearer is here for professional business.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Reverse/RevDC</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<equippedStatOffsets>
+			<TradePriceImprovement>0.1</TradePriceImprovement>
+		</equippedStatOffsets>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Reverse/RevDC</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+
+	<ThingDef ParentName="RDetachedCollarBase">
+        <defName>RevDCr</defName>
+        <label>Reverse - Collar and Ribbon</label>
+        <description>Part of the Reverse Series. A detached collar with a ribbon for a creative and fashionable wearer.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Reverse/RevDCr</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<equippedStatOffsets>
+			<NegotiationAbility>0.1</NegotiationAbility>
+		</equippedStatOffsets>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Reverse/RevDCr</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+
+</Defs>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ApparelPaperPattern.ApparelPaperPatternDef[not(IgnorePackageIds)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ApparelPaperPattern.ApparelPaperPatternDef[not(IgnorePackageIds)]</xpath>
+      <value>
+        <IgnorePackageIds/>
+      </value>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ApparelPaperPattern.ApparelPaperPatternDef/IgnorePackageIds</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ApparelPaperPattern.ApparelPaperPatternDef/IgnorePackageIds</xpath>
+      <value>
+        <li>catbot1310.nalwardobe</li>
+		<li>1234567.rbapparels</li>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>

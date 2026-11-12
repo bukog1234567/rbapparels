@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs> 
+    <ThingDef Name="BikiniTorsoOSBase" Abstract="True">
+		<thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<tickerType>Never</tickerType>
+		
+		<recipeMaker>
+			  <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			  <workSkill>Crafting</workSkill>
+			  <effectWorking>Tailor</effectWorking>
+			  <soundWorking>Recipe_Tailor</soundWorking>
+			  <skillRequirements>
+				<Crafting>4</Crafting>
+			  </skillRequirements>
+			  <recipeUsers>
+				<li>RBACraft</li>
+			  </recipeUsers>
+		</recipeMaker>
+		
+		<costStuffCount>75</costStuffCount>
+        <stuffCategories>
+          <li>Fabric</li>
+        </stuffCategories>
+        <thingCategories>
+          <li>Apparel</li>
+        </thingCategories>
+        <statBases>
+          <MaxHitPoints>150</MaxHitPoints>
+          <WorkToMake>600</WorkToMake>
+          <Mass>0.2</Mass>
+          <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+          <StuffEffectMultiplierInsulation_Cold>0.2</StuffEffectMultiplierInsulation_Cold>
+          <StuffEffectMultiplierInsulation_Heat>0.2</StuffEffectMultiplierInsulation_Heat>
+          <EquipDelay>1</EquipDelay>
+        </statBases>
+		<apparel>
+          <bodyPartGroups>
+            <li>Torso</li>
+          </bodyPartGroups>
+          <layers>
+            <li>OnSkin</li>
+          </layers>
+          <defaultOutfitTags>
+            <li>Worker</li>
+            <li>Soldier</li>
+          </defaultOutfitTags>
+          <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		  <countsAsClothingForNudity>false</countsAsClothingForNudity>
+        </apparel>
+        <colorGenerator Class="ColorGenerator_StandardApparel" />
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+		</comps>
+		<modExtensions>
+			<li Class="BodyTypeApparelRestrictions.ApparelBodyTypeExtension">
+			<allowedBodyTypes>
+				<li>Female</li>
+				<li>Thin</li>
+			</allowedBodyTypes>
+			</li>
+		</modExtensions>
+		
+	</ThingDef>
+
+	<ThingDef Name="ApparelStockingsSetBase" Abstract="True">
+		<thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<tickerType>Never</tickerType>
+		
+		<recipeMaker>
+			  <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			  <workSkill>Crafting</workSkill>
+			  <effectWorking>Tailor</effectWorking>
+			  <soundWorking>Recipe_Tailor</soundWorking>
+			  <skillRequirements>
+				<Crafting>4</Crafting>
+			  </skillRequirements>
+			  <recipeUsers>
+				<li>RBACraft</li>
+			  </recipeUsers>
+		</recipeMaker>
+		
+		<costStuffCount>100</costStuffCount>
+        <stuffCategories>
+          <li>Fabric</li>
+        </stuffCategories>
+        <thingCategories>
+          <li>Apparel</li>
+        </thingCategories>
+        <statBases>
+          <MaxHitPoints>200</MaxHitPoints>
+          <WorkToMake>1500</WorkToMake>
+          <Mass>0.4</Mass>
+          <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+          <StuffEffectMultiplierInsulation_Cold>0.6</StuffEffectMultiplierInsulation_Cold>
+          <StuffEffectMultiplierInsulation_Heat>0.4</StuffEffectMultiplierInsulation_Heat>
+          <EquipDelay>1</EquipDelay>
+        </statBases>
+		<apparel>
+          <bodyPartGroups>
+			<li>Shoulders</li>
+			<li>Arms</li>
+			<li>Legs</li>
+          </bodyPartGroups>
+          <layers>
+            <li>OnSkin</li>
+          </layers>
+          <defaultOutfitTags>
+            <li>Worker</li>
+            <li>Soldier</li>
+          </defaultOutfitTags>
+          <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		  <countsAsClothingForNudity>true</countsAsClothingForNudity>
+        </apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+		</comps>
+		<modExtensions>
+			<li Class="BodyTypeApparelRestrictions.ApparelBodyTypeExtension">
+			<allowedBodyTypes>
+				<li>Female</li>
+				<li>Thin</li>
+			</allowedBodyTypes>
+			</li>
+		</modExtensions>
+	
+	</ThingDef>
+
+<!-- CHILD DEFS -->
+	<ThingDef ParentName="BikiniTorsoOSBase">
+        <defName>FBik</defName>
+        <label>Fur - Fur Bikini</label>
+        <description>Animal leather fashioned into a bikini. It's thick fabric protects the wearer better from the cold. The material still retains the scent of creatures, allowing the wearer to approach animals easier for taming and training.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Bikini/FBik</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+        </graphicData>
+		<stuffCategories Inherit="False">
+          <li>Leathery</li>
+        </stuffCategories>
+		<statBases>
+			<StuffEffectMultiplierInsulation_Cold>0.75</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.1</StuffEffectMultiplierInsulation_Heat>
+		</statBases>
+		<equippedStatOffsets>
+			<TameAnimalChance>0.1</TameAnimalChance>
+			<TrainAnimalChance>0.1</TrainAnimalChance>
+		</equippedStatOffsets>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Bikini/FBik</wornGraphicPath>
+		  <useWornGraphicMask>false</useWornGraphicMask>
+          <tags>
+            <li>Neolithic</li>
+          </tags>
+        </apparel>
+    </ThingDef>
+	
+    <ThingDef ParentName="ApparelStockingsSetBase">
+        <defName>FBikS</defName>
+        <label>Fur - Fur Stockings</label>
+        <description>Animal leather fashioned into a pair of stockings. It possesses great protection against cold weather. The material still retains the scent of creatures, allowing the wearer to approach animals easier for taming and training.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Bikini/FBikS</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<stuffCategories Inherit="False">
+          <li>Leathery</li>
+        </stuffCategories>
+        <statBases>
+          <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+          <StuffEffectMultiplierInsulation_Cold>0.8</StuffEffectMultiplierInsulation_Cold>
+          <StuffEffectMultiplierInsulation_Heat>0.4</StuffEffectMultiplierInsulation_Heat>
+        </statBases>
+		<equippedStatOffsets>
+			<TameAnimalChance>0.1</TameAnimalChance>
+			<TrainAnimalChance>0.1</TrainAnimalChance>
+		</equippedStatOffsets>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Bikini/FBikS</wornGraphicPath>
+		  <useWornGraphicMask>false</useWornGraphicMask>
+		  <tags>
+            <li>Neolithic</li>
+          </tags>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="BikiniTorsoOSBase">
+        <defName>GBik</defName>
+        <label>Bikini - Golden</label>
+        <description>A golden bikini made with real gold that was compressed and sliced into extremely thin sheets, then sewn back together. It is a perfect way to show off the wearer's wealth and body at the same time.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Bikini/GBik</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <costList>
+			<Gold>150</Gold>
+		</costList>
+		<costStuffCount Inherit="False"/>
+		<stuffCategories Inherit="False"/>
+		<statBases>
+          <ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+		  <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+		  <ArmorRating_Heat>0.05</ArmorRating_Heat>
+		</statBases>
+		<equippedStatOffsets>
+			<PawnBeauty>2</PawnBeauty>
+			<SocialImpact>0.25</SocialImpact>
+		</equippedStatOffsets>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Bikini/GBik</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+          <tags>
+            <li>Royal</li>
+			<li>RoyalTier2</li>
+			<li>RoyalTier3</li>
+			<li>RoyalTier4</li>
+			<li>RoyalTier5</li>
+			<li>RoyalTier6</li>
+			<li>RoyalTier7</li>
+          </tags>
+          <defaultOutfitTags>
+            <li>Royal</li>
+          </defaultOutfitTags>
+        </apparel>
+    </ThingDef>
+	
+    <ThingDef ParentName="BikiniTorsoOSBase">
+        <defName>CBik</defName>
+        <label>Cow - Cowprint Bikini</label>
+        <description>A bikini with a black and white pattern commonly seen in Holstein domestic cattle. Wearing this outfit seems to aid in gathering and milking animals. It is also an excellent way of advertising the freshness and quality of the ingredients. This outfit can also be found being worn by human livestock in certain areas of the rim.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Bikini/CBik</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<stuffCategories Inherit="True">
+          <li>Leathery</li>
+        </stuffCategories>
+		<equippedStatOffsets>
+			<AnimalGatherSpeed>0.15</AnimalGatherSpeed>
+			<AnimalGatherYield>0.1</AnimalGatherYield>
+			<AnimalProductsSellImprovement MayRequire="Ludeon.RimWorld.Ideology">0.05</AnimalProductsSellImprovement>
+		</equippedStatOffsets>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Bikini/CBik</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+        </apparel>
+    </ThingDef>	
+
+
+    <ThingDef ParentName="ApparelStockingsSetBase">
+        <defName>CBikS</defName>
+        <label>Cow - Cowprint Stockings</label>
+        <description>A pair of gloves and stockings with a black and white pattern commonly seen in Holstein domestic cattle. Wearing this outfit seems to aid in gathering and milking animals. It is also an excellent way of advertising the freshness and quality of the ingredients. This outfit can also be found being worn by human livestock in certain areas of the rim.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Bikini/CBikS</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<stuffCategories Inherit="True">
+          <li>Leathery</li>
+        </stuffCategories>
+		<equippedStatOffsets>
+			<AnimalGatherSpeed>0.15</AnimalGatherSpeed>
+			<AnimalGatherYield>0.1</AnimalGatherYield>
+			<AnimalProductsSellImprovement MayRequire="Ludeon.RimWorld.Ideology">0.05</AnimalProductsSellImprovement>
+		</equippedStatOffsets>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Bikini/CBikS</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="BikiniTorsoOSBase">
+        <defName>FrBik</defName>
+        <label>Bikini - Frilled</label>
+        <description>A set of swimwear with frills that adds a dash of cuteness. A little more bouyant than the other types of swimwear, it is suited for the beach and water-related activities. Don't be afraid to get wet.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Bikini/FrBik</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<equippedStatOffsets>
+			<PawnBeauty>1</PawnBeauty>
+			<FishingSpeed MayRequire="Ludeon.RimWorld.Odyssey">0.05</FishingSpeed>
+			<FishingYield MayRequire="Ludeon.RimWorld.Odyssey">0.05</FishingYield>
+		</equippedStatOffsets>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Bikini/FrBik</wornGraphicPath>
+		  <useWornGraphicMask>false</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="BikiniTorsoOSBase">
+        <defName>ShBik</defName>
+        <label>Bikini - Shiny</label>
+        <description>A set of shiny bikini that can be combined with other types of clothing or used on its own. It is light and allow huge range of motion, making it useful for all types of activities.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Bikini/ShBik</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<equippedStatOffsets>
+			<PawnBeauty>1</PawnBeauty>
+			<MoveSpeed>0.1</MoveSpeed>
+		</equippedStatOffsets>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Bikini/ShBik</wornGraphicPath>
+		  <useWornGraphicMask>false</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+
+</Defs>

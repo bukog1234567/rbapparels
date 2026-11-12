@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BenchBase">
+    <defName>RBACraft</defName>
+    <label>Mannequin Workbench</label>
+    <description>A workbench created for certain outfit recipes.</description>
+	<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <thingClass>Building_WorkTable</thingClass>
+	<tickerType>Normal</tickerType>
+	<researchPrerequisites>
+		<li>ComplexClothing</li>
+    </researchPrerequisites>
+    <graphicData>
+		<texPath>Things/Building/Production/RBACraft</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>(1,1.2)</drawSize>
+		<shaderType>CutoutComplex</shaderType>
+		<shadowData>
+			<volume>(0.05, 0.5, 0.6)</volume>
+			<offset>(0, 0, -0.1)</offset>
+		</shadowData>
+    </graphicData>
+	<rotatable>false</rotatable>
+	<uiIconScale>1.0</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+		<Mass>10</Mass>
+		<WorkToBuild>300</WorkToBuild>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Flammability>1.0</Flammability>
+		<WorkTableWorkSpeedFactor>1</WorkTableWorkSpeedFactor>
+    </statBases>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+	<fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <size>(1,1)</size>
+    <designationCategory>Production</designationCategory>
+    <passability>PassThroughOnly</passability>
+	<pathCost>70</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+		<li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+		<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+		<sowTag>SupportPlantsOnly</sowTag>
+		<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+		<ai_chillDestination>false</ai_chillDestination>
+		<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+		<workTableRoomRole>Workshop</workTableRoomRole>
+		<workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
+		<buildingTags>
+			<li>Production</li>
+		</buildingTags>
+    </building>
+	<costStuffCount>150</costStuffCount>
+	<stuffCategories>
+		<li>Woody</li>
+		<li>Metallic</li>
+	</stuffCategories>
+    <comps>
+		<li Class="CompProperties_AffectedByFacilities">
+			<linkableFacilities>
+				<li>ToolCabinet</li>
+			</linkableFacilities>
+		</li>
+		<li Class="CompProperties_ReportWorkSpeed">
+			<workSpeedStat>WorkTableWorkSpeedFactor</workSpeedStat>
+		</li>
+    </comps>
+    <designationHotKey>Misc1</designationHotKey>
+    <placeWorkers>
+		<li>PlaceWorker_ShowFacilitiesConnections</li>
+		<li>PlaceWorker_ReportWorkSpeedPenalties</li>
+		<li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+  </ThingDef>
+</Defs>

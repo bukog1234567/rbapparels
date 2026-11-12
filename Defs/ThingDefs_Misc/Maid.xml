@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs> 
+
+    <ThingDef ParentName="BikiniTorsoOSBase">
+        <defName>MBik</defName>
+        <label>Maid - Maid Bikini</label>
+        <description>Part of the Maid Series. This is a bikini created to look like maidwear... or is it a maid clothing designed to be a bikini? Its wearer feels a boost when doing all kinds of housework.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Maid/MBik</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<equippedStatOffsets>
+			<CleaningSpeed>0.2</CleaningSpeed>
+			<GeneralLaborSpeed>0.1</GeneralLaborSpeed>
+		</equippedStatOffsets>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Maid/MBik</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+
+	<ThingDef ParentName="ApparelNeckMBase">
+        <defName>MNeck</defName>
+        <label>Maid - Maid Neckwear</label>
+        <description>Part of the Maid Series. A small piece of garment around the neck and shoulders to accentuate the feeling of service. Its wearer is less tired and feels a boost when doing housework.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Maid/MNeck</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<equippedStatOffsets>
+			<CleaningSpeed>0.1</CleaningSpeed>
+			<RestFallRateFactor>0.1</RestFallRateFactor>
+		</equippedStatOffsets>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Maid/MNeck</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef ParentName="ApparelStockingsSetBase">
+        <defName>MStock</defName>
+        <label>Maid - Maid Stockings</label>
+        <description>Part of the Maid Series. A pair of frilly, maid stockings. Its wearer can walk faster and feel a boost when doing housework.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Maid/MStock</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<equippedStatOffsets>
+			<CleaningSpeed>0.1</CleaningSpeed>
+			<MoveSpeed>0.1</MoveSpeed>
+		</equippedStatOffsets>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Maid/MStock</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+
+	<ThingDef ParentName="ApparelTorsoMBase">
+        <defName>MApron</defName>
+        <label>Maid - Maid Apron</label>
+        <description>Part of the Maid Series. An apron that is worn by maids. Its wearer feels a boost when doing housework, especially cooking meals.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Maid/MApron</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<equippedStatOffsets>
+			<CleaningSpeed>0.1</CleaningSpeed>
+			<CookSpeed>0.3</CookSpeed>
+		</equippedStatOffsets>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Maid/MApron</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+
+</Defs>

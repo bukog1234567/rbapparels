@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs> 
+	<ThingDef Name="ArmorSetMBase" Abstract="True">
+		<thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<tickerType>Never</tickerType>
+		
+		<recipeMaker>
+			  <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			  <workSkill>Crafting</workSkill>
+			  <effectWorking>Tailor</effectWorking>
+			  <soundWorking>Recipe_Tailor</soundWorking>
+			  <skillRequirements>
+				<Crafting>7</Crafting>
+			  </skillRequirements>
+			  <recipeUsers>
+				<li>RBACraft</li>
+			  </recipeUsers>
+		</recipeMaker>
+		<thingCategories>
+          <li>Apparel</li>
+        </thingCategories>
+        <statBases>
+          <MaxHitPoints>500</MaxHitPoints>
+          <WorkToMake>600</WorkToMake>
+          <Mass>0.75</Mass>
+          <StuffEffectMultiplierArmor>0.25</StuffEffectMultiplierArmor>
+          <StuffEffectMultiplierInsulation_Cold>0.3</StuffEffectMultiplierInsulation_Cold>
+          <StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+          <EquipDelay>3</EquipDelay>
+        </statBases>
+		<apparel>
+          <layers>
+            <li>Middle</li>
+          </layers>
+          <tags>
+            <li></li>
+          </tags>
+          <defaultOutfitTags>
+            <li>Soldier</li>
+          </defaultOutfitTags>
+          <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		  <countsAsClothingForNudity>true</countsAsClothingForNudity>
+        </apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+		</comps>
+		<modExtensions>
+			<li Class="BodyTypeApparelRestrictions.ApparelBodyTypeExtension">
+			<allowedBodyTypes>
+				<li>Female</li>
+				<li>Thin</li>
+			</allowedBodyTypes>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef ParentName="ArmorSetMBase">
+        <defName>ArmSet</defName>
+        <label>Combat - Pauldron And Boots</label>
+        <description>Part of the Combat Series. A pair of metallic pauldron and boots that barely cover the wearer. It is meant to be combined with any torso piece of clothing such as bikinis and pasties to wear those along in combat. Due to sturdier armor, this set is better suited for melee fighters. Its lack of coverage is compensated by the wearer's ease of dodging.</description>
+        <graphicData>
+          <texPath>Things/Apparel/ArmorSet/ArmSet</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <costStuffCount>200</costStuffCount>
+        <stuffCategories>
+          <li>Metallic</li>
+        </stuffCategories>
+		<costList>
+			<Gold>100</Gold>
+		</costList>
+		<statBases>
+		  <Mass>2</Mass>
+		  <WorkToMake>1200</WorkToMake>
+		  <StuffEffectMultiplierArmor>0.5</StuffEffectMultiplierArmor>
+          <StuffEffectMultiplierInsulation_Cold>0.3</StuffEffectMultiplierInsulation_Cold>
+          <StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+        </statBases>
+		<equippedStatOffsets>
+			<MeleeDodgeChance>0.3</MeleeDodgeChance>
+			<MoveSpeed>0.1</MoveSpeed>
+		</equippedStatOffsets>
+        <apparel>
+          <bodyPartGroups>
+			<li>Arms</li>
+			<li>Legs</li>
+          </bodyPartGroups>
+          <wornGraphicPath>Things/Apparel/ArmorSet/ArmSet</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+        </apparel>
+
+    </ThingDef>
+	
+	<ThingDef ParentName="ArmorSetMBase">
+        <defName>MilGl</defName>
+        <label>Combat - Military Gloves</label>
+        <description>Part of the Combat Series. A pair of military gloves and an armband. A more modern-era themeed military style suited for officers and soldiers. With as little resistance as possible, range combatants can quickly shoot and adjust their aim.</description>
+        <graphicData>
+          <texPath>Things/Apparel/ArmorSet/MilGl</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <costStuffCount>30</costStuffCount>
+        <stuffCategories>
+          <li>Fabric</li>
+		  <li>Leathery</li>
+		  <li>Metallic</li>
+        </stuffCategories>
+		<equippedStatOffsets>
+			<ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
+			<RangedCooldownFactor MayRequire="Ludeon.RimWorld.Biotech">0.1</RangedCooldownFactor>
+		</equippedStatOffsets>
+        <apparel>
+          <bodyPartGroups>
+			<li>Arms</li>
+          </bodyPartGroups>
+          <wornGraphicPath>Things/Apparel/ArmorSet/MilGl</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+	
+	<ThingDef ParentName="ArmorSetMBase">
+        <defName>MilB</defName>
+        <label>Combat - Military Boots</label>
+        <description>Part of the Combat Series. A pair of military boots for any terrain. A more modern-era themeed military style suited for officers and soldiers. With as little resistance as possible, range combatants can quickly shoot and adjust their aim.</description>
+        <graphicData>
+          <texPath>Things/Apparel/ArmorSet/MilB</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <costStuffCount>30</costStuffCount>
+        <stuffCategories>
+          <li>Fabric</li>
+		  <li>Leathery</li>
+		  <li>Metallic</li>
+        </stuffCategories>
+		<equippedStatOffsets>
+			<ShootingAccuracyPawn>0.15</ShootingAccuracyPawn>
+			<RangedCooldownFactor MayRequire="Ludeon.RimWorld.Biotech">0.1</RangedCooldownFactor>
+		</equippedStatOffsets>
+        <apparel>
+          <bodyPartGroups>
+			<li>Legs</li>
+          </bodyPartGroups>
+          <wornGraphicPath>Things/Apparel/ArmorSet/MilB</wornGraphicPath>
+		  <useWornGraphicMask>false</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+	
+</Defs>

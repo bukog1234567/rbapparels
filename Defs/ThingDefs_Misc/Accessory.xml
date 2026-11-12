@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs> 
+	<ThingDef Name="EarsAndTailBase" Abstract="True">
+		<thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<tickerType>Never</tickerType>
+		<recipeMaker>
+			  <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			  <workSkill>Crafting</workSkill>
+			  <effectWorking>Tailor</effectWorking>
+			  <soundWorking>Recipe_Tailor</soundWorking>
+			  <skillRequirements>
+				<Crafting>4</Crafting>
+			  </skillRequirements>
+			  <recipeUsers>
+				<li>RBACraft</li>
+			  </recipeUsers>
+		</recipeMaker>
+		<costStuffCount>30</costStuffCount>
+        <stuffCategories>
+          <li>Fabric</li>
+          <li>Leathery</li>
+        </stuffCategories>
+		<thingCategories>
+          <li>Apparel</li>
+        </thingCategories>
+		<statBases>
+          <MaxHitPoints>100</MaxHitPoints>
+          <WorkToMake>100</WorkToMake>
+          <Mass>0.1</Mass>
+          <StuffEffectMultiplierArmor>0.05</StuffEffectMultiplierArmor>
+          <StuffEffectMultiplierInsulation_Cold>0.02</StuffEffectMultiplierInsulation_Cold>
+          <StuffEffectMultiplierInsulation_Heat>0.01</StuffEffectMultiplierInsulation_Heat>
+          <EquipDelay>1</EquipDelay>
+        </statBases>
+		<apparel>
+          <bodyPartGroups>
+            <li>UpperHead</li>
+          </bodyPartGroups>
+          <layers>
+            <li>Overhead</li>
+          </layers>
+          <tags>
+            <li></li>
+          </tags>
+          <defaultOutfitTags>
+            <li>Worker</li>
+            <li>Soldier</li>
+          </defaultOutfitTags>
+          <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		  <countsAsClothingForNudity>true</countsAsClothingForNudity>
+        </apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+		</comps>
+	</ThingDef>
+
+	<ThingDef Name="HatUHOHBase" Abstract="True">
+		<thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<tickerType>Never</tickerType>
+		<recipeMaker>
+			  <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			  <workSkill>Crafting</workSkill>
+			  <effectWorking>Tailor</effectWorking>
+			  <soundWorking>Recipe_Tailor</soundWorking>
+			  <skillRequirements>
+				<Crafting>4</Crafting>
+			  </skillRequirements>
+			  <recipeUsers>
+				<li>RBACraft</li>
+			  </recipeUsers>
+		</recipeMaker>
+
+		<thingCategories>
+          <li>Apparel</li>
+        </thingCategories>
+		<statBases>
+          <MaxHitPoints>100</MaxHitPoints>
+          <WorkToMake>100</WorkToMake>
+          <Mass>0.1</Mass>
+          <StuffEffectMultiplierArmor>0.05</StuffEffectMultiplierArmor>
+          <StuffEffectMultiplierInsulation_Cold>0.02</StuffEffectMultiplierInsulation_Cold>
+          <StuffEffectMultiplierInsulation_Heat>0.01</StuffEffectMultiplierInsulation_Heat>
+          <EquipDelay>1</EquipDelay>
+        </statBases>
+		<apparel>
+          <bodyPartGroups>
+            <li>UpperHead</li>
+          </bodyPartGroups>
+          <layers>
+            <li>Overhead</li>
+          </layers>
+          <tags>
+            <li></li>
+          </tags>
+          <defaultOutfitTags>
+            <li>Worker</li>
+            <li>Soldier</li>
+          </defaultOutfitTags>
+          <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		  <countsAsClothingForNudity>true</countsAsClothingForNudity>
+        </apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+		</comps>
+	</ThingDef>
+
+<!-- CHILD DEFS -->
+  
+    <ThingDef ParentName="EarsAndTailBase">
+        <defName>BBEars</defName>
+        <label>Accessory - Black Bunny Ears</label>
+        <description>A black and rubbery piece of headwear with two pronged vertical shapes that vaguely resembles bunny ears. Though incomplete in its form, it remains a staple sight in all kinds of events- from cosplay, clubs, to adult entertainment.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Accessory/BBEars</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <equippedStatOffsets>
+			<PawnBeauty>1</PawnBeauty>
+			<TradePriceImprovement>0.1</TradePriceImprovement>
+		</equippedStatOffsets>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Accessory/BBEars</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+
+   <ThingDef ParentName="EarsAndTailBase">
+        <defName>CBEars</defName>
+        <label>Accessory - Colored Bunny Ears</label>
+        <description>A piece of bunny-ear-shaped headwear, complete with imitation of the inner side of the ears and fluff. Wearing this piece of headwear grants a side of cuteness to the wearer. Bunnies are prey animals often associated with fertility, if that is what the wearer wants to indicate.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Accessory/CBEars</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<equippedStatOffsets>
+			<PawnBeauty>1</PawnBeauty>
+			<Fertility MayRequire="Ludeon.RimWorld.Biotech">0.1</Fertility>
+		</equippedStatOffsets>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Accessory/CBEars</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+ 
+ 	<ThingDef ParentName="HatUHOHBase">
+        <defName>MilH</defName>
+        <label>Combat - Military Hat</label>
+        <description>Part of the Combat Series. A military hat with a gold trim and emblem. A more modern-era themeed military style suited for officers and soldiers. Its wearer radiates an aura of dominance.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Accessory/MilH</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<equippedStatOffsets>
+			<SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">0.2</SuppressionPower>
+			<ArrestSuccessChance>0.2</ArrestSuccessChance>
+			<SocialImpact>0.1</SocialImpact>
+		</equippedStatOffsets>
+		<costList>
+			<Gold>30</Gold>
+		</costList>
+        <costStuffCount>20</costStuffCount>
+        <stuffCategories>
+          <li>Fabric</li>
+          <li>Leathery</li>
+		  <li>Metallic</li>
+        </stuffCategories>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Accessory/MilH</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+ 
+ <!-- NO PARENT, LET'S CALL THIS "ORPHAN" -->
+ 
+  <ThingDef>
+        <thingClass>Apparel</thingClass>
+		<defName>BellColl</defName>
+		<label>Cow - Bell Collar</label>
+        <description>Part of the Cow Series. A small black collar with a singular bell to be worn around the neck. Historically put on grazing farm animals for easy tracking and safety. It still serves mostly the same purpose, and can be placed on all kinds of livestock- sheep, goats, cattle, and on some strrange places, humans. This happens to be the lattermost one.</description>
+        <recipeMaker>
+			  <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			  <workSkill>Crafting</workSkill>
+			  <effectWorking>Tailor</effectWorking>
+			  <soundWorking>Recipe_Tailor</soundWorking>
+			  <skillRequirements>
+				<Crafting>4</Crafting>
+			  </skillRequirements>
+			  <recipeUsers>
+				<li>RBACraft</li>
+			  </recipeUsers>
+		</recipeMaker>
+        <graphicData>
+          <texPath>Things/Apparel/Accessory/BellColl</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<equippedStatOffsets>
+			<SlaveSuppressionOffset>0.2</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		<costList>
+			<Gold>10</Gold>
+		</costList>
+        <costStuffCount>30</costStuffCount>
+        <stuffCategories>
+          <li>Fabric</li>
+		  <li>Leathery</li>
+        </stuffCategories>
+        <thingCategories>
+          <li>Apparel</li>
+        </thingCategories>
+        <statBases>
+          <MaxHitPoints>100</MaxHitPoints>
+          <WorkToMake>100</WorkToMake>
+          <Mass>0.1</Mass>
+          <StuffEffectMultiplierArmor>0.03</StuffEffectMultiplierArmor>
+          <StuffEffectMultiplierInsulation_Cold>0.01</StuffEffectMultiplierInsulation_Cold>
+          <StuffEffectMultiplierInsulation_Heat>0.01</StuffEffectMultiplierInsulation_Heat>
+          <EquipDelay>1</EquipDelay>
+        </statBases>
+        <apparel>
+          <bodyPartGroups>
+            <li>Neck</li>
+          </bodyPartGroups>
+          <wornGraphicPath>Things/Apparel/Accessory/BellColl</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+          <layers>
+            <li>Middle</li>
+          </layers>
+          <tags>
+            <li></li>
+          </tags>
+          <defaultOutfitTags>
+            <li>Worker</li>
+            <li>Soldier</li>
+          </defaultOutfitTags>
+          <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		  <countsAsClothingForNudity>true</countsAsClothingForNudity>
+        </apparel>
+        <colorGenerator Class="ColorGenerator_StandardApparel" />
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+		</comps>
+		<modExtensions>
+			<li Class="BodyTypeApparelRestrictions.ApparelBodyTypeExtension">
+			<allowedBodyTypes>
+				<li>Female</li>
+				<li>Thin</li>
+			</allowedBodyTypes>
+			</li>
+		</modExtensions>
+    </ThingDef>
+	
+	 <ThingDef ParentName="EarsAndTailBase">
+        <defName>CowEH</defName>
+        <label>Cow - Cow Ears and Horns</label>
+        <description>Part of the Cow Series. A pair of ears and horns modeled after cattle. Female cattle usually don't possess horns however, this is simply an accessory clipped on the head. Some farmers say that familiar shapes calm animals down while harvesting them.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Accessory/CowEH</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<equippedStatOffsets>
+			<AnimalGatherSpeed>0.1</AnimalGatherSpeed>
+			<AnimalGatherYield>0.1</AnimalGatherYield>
+		</equippedStatOffsets>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Accessory/CowEH</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+	
+	<ThingDef>
+        <thingClass>Apparel</thingClass>
+		<defName>BTail</defName>
+        <label>Accessory - Bunny Tail</label>
+        <description>A piece of fluffy ball pasted onto the lower back to simulate the tail of a bunny. A bunny's tail isn't actually circular, it curls upon itself and the fur around it sticks outward in all directions which is how it ends up how it looks. But that isn't the case for this accessory, it simply is a circular fluff.</description>
+        <recipeMaker>
+			  <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			  <workSkill>Crafting</workSkill>
+			  <effectWorking>Tailor</effectWorking>
+			  <soundWorking>Recipe_Tailor</soundWorking>
+			  <skillRequirements>
+				<Crafting>4</Crafting>
+			  </skillRequirements>
+			  <recipeUsers>
+				<li>RBACraft</li>
+			  </recipeUsers>
+		</recipeMaker>
+        <graphicData>
+          <texPath>Things/Apparel/Accessory/BTail</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<equippedStatOffsets>
+			<PawnBeauty>1</PawnBeauty>
+		</equippedStatOffsets>
+        <costStuffCount>30</costStuffCount>
+        <stuffCategories>
+          <li>Fabric</li>
+          <li>Leathery</li>
+        </stuffCategories>
+        <thingCategories>
+          <li>Apparel</li>
+        </thingCategories>
+        <statBases>
+          <MaxHitPoints>100</MaxHitPoints>
+          <WorkToMake>100</WorkToMake>
+          <Mass>0.1</Mass>
+          <StuffEffectMultiplierArmor>0.02</StuffEffectMultiplierArmor>
+          <StuffEffectMultiplierInsulation_Cold>0.01</StuffEffectMultiplierInsulation_Cold>
+          <StuffEffectMultiplierInsulation_Heat>0.01</StuffEffectMultiplierInsulation_Heat>
+          <EquipDelay>1</EquipDelay>
+        </statBases>
+        <apparel>
+          <bodyPartGroups>
+            <li>Legs</li>
+          </bodyPartGroups>
+          <wornGraphicPath>Things/Apparel/Accessory/BTail</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+          <layers>
+            <li>Middle</li>
+          </layers>
+          <tags>
+            <li></li>
+          </tags>
+          <defaultOutfitTags>
+            <li>Worker</li>
+            <li>Soldier</li>
+          </defaultOutfitTags>
+          <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		  <countsAsClothingForNudity>true</countsAsClothingForNudity>
+        </apparel>
+        <colorGenerator Class="ColorGenerator_StandardApparel" />
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+		</comps>
+		<modExtensions>
+			<li Class="BodyTypeApparelRestrictions.ApparelBodyTypeExtension">
+			<allowedBodyTypes>
+				<li>Female</li>
+				<li>Thin</li>
+			</allowedBodyTypes>
+			</li>
+		</modExtensions>
+    </ThingDef>
+
+</Defs>

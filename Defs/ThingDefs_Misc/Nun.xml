@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs> 
+	<ThingDef Name="ApparelNeckMBase" Abstract="True">
+		<thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<tickerType>Never</tickerType>
+		<recipeMaker>
+			  <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			  <workSkill>Crafting</workSkill>
+			  <effectWorking>Tailor</effectWorking>
+			  <soundWorking>Recipe_Tailor</soundWorking>
+			  <skillRequirements>
+				<Crafting>5</Crafting>
+			  </skillRequirements>
+			  <recipeUsers>
+				<li>RBACraft</li>
+			  </recipeUsers>
+		</recipeMaker>
+		<costStuffCount>50</costStuffCount>
+        <stuffCategories>
+          <li>Fabric</li>
+        </stuffCategories>
+        <thingCategories>
+          <li>Apparel</li>
+        </thingCategories>
+        <statBases>
+          <MaxHitPoints>100</MaxHitPoints>
+          <WorkToMake>800</WorkToMake>
+          <Mass>0.2</Mass>
+          <StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
+          <StuffEffectMultiplierInsulation_Cold>0.1</StuffEffectMultiplierInsulation_Cold>
+          <StuffEffectMultiplierInsulation_Heat>0.1</StuffEffectMultiplierInsulation_Heat>
+          <EquipDelay>1</EquipDelay>
+        </statBases>
+		<apparel>
+          <bodyPartGroups>
+            <li>Neck</li>
+          </bodyPartGroups>
+          <layers>
+            <li>Middle</li>
+          </layers>
+          <tags>
+            <li></li>
+          </tags>
+          <defaultOutfitTags>
+            <li>Worker</li>
+            <li>Soldier</li>
+          </defaultOutfitTags>
+          <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		  <countsAsClothingForNudity>true</countsAsClothingForNudity>
+        </apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+		
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+		</comps>
+		<modExtensions>
+			<li Class="BodyTypeApparelRestrictions.ApparelBodyTypeExtension">
+			<allowedBodyTypes>
+				<li>Female</li>
+				<li>Thin</li>
+			</allowedBodyTypes>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<ThingDef Name="ApparelTorsoMBase" Abstract="True">
+		<thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<tickerType>Never</tickerType>
+		<recipeMaker>
+			  <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			  <workSkill>Crafting</workSkill>
+			  <effectWorking>Tailor</effectWorking>
+			  <soundWorking>Recipe_Tailor</soundWorking>
+			  <skillRequirements>
+				<Crafting>5</Crafting>
+			  </skillRequirements>
+			  <recipeUsers>
+				<li>RBACraft</li>
+			  </recipeUsers>
+		</recipeMaker>
+		<costStuffCount>75</costStuffCount>
+        <stuffCategories>
+          <li>Fabric</li>
+        </stuffCategories>
+        <thingCategories>
+          <li>Apparel</li>
+        </thingCategories>
+        <statBases>
+          <MaxHitPoints>100</MaxHitPoints>
+          <WorkToMake>1200</WorkToMake>
+          <Mass>0.3</Mass>
+          <StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
+          <StuffEffectMultiplierInsulation_Cold>0.075</StuffEffectMultiplierInsulation_Cold>
+          <StuffEffectMultiplierInsulation_Heat>0.05</StuffEffectMultiplierInsulation_Heat>
+          <EquipDelay>1</EquipDelay>
+        </statBases>
+		<apparel>
+          <bodyPartGroups>
+			<li>Torso</li>
+          </bodyPartGroups>
+          <layers>
+            <li>Middle</li>
+          </layers>
+          <tags>
+            <li></li>
+          </tags>
+          <defaultOutfitTags>
+            <li>Worker</li>
+            <li>Soldier</li>
+          </defaultOutfitTags>
+          <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		  <countsAsClothingForNudity>true</countsAsClothingForNudity>
+        </apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+		
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+		</comps>
+		<modExtensions>
+			<li Class="BodyTypeApparelRestrictions.ApparelBodyTypeExtension">
+			<allowedBodyTypes>
+				<li>Female</li>
+				<li>Thin</li>
+			</allowedBodyTypes>
+			</li>
+		</modExtensions>
+		
+	</ThingDef>
+	
+<!-- CHILD DEF -->
+	
+	<ThingDef ParentName="ApparelNeckMBase">
+        <defName>NunNA</defName>
+        <label>Nun - Neckwear A</label>
+        <description>Part of the Nun Series. A religious neck garment for combination with other clothing. By itself, the drapes barely act as cover for the chest but can be worn bare. Wearing this outfit gives the wearer an ambience of faith and trustworthiness, allowing her to convert others much easier.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Nun/NunNA</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<equippedStatOffsets>
+			<NegotiationAbility>0.05</NegotiationAbility>
+			<ConversionPower MayRequire="Ludeon.RimWorld.Ideology">0.1</ConversionPower>
+		</equippedStatOffsets>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Nun/NunNA</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+
+	<ThingDef ParentName="ApparelNeckMBase">
+        <defName>NunNB</defName>
+        <label>Nun - Neckwear B</label>
+        <description>Part of the Nun Series. A religious neck garment for combination with other clothing. This version wraps only around the neck, leaving the upper chest open which is why it is often combined with a full outfit. Wearing this outfit gives the wearer an ambience of faith and holiness, allowing her to suppress different kinds of evil.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Nun/NunNB</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<equippedStatOffsets>
+			<NegotiationAbility>0.05</NegotiationAbility>
+			<ActivitySuppressionRate MayRequire="Ludeon.RimWorld.Anomaly">0.1</ActivitySuppressionRate>
+		</equippedStatOffsets>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Nun/NunNB</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+
+	<ThingDef ParentName="ApparelTorsoMBase">
+        <defName>NunA</defName>
+        <label>Nun - Torso A</label>
+        <description>Part of the Nun Series. A piece of religious garment that covers the torso but not the breast. It is meant to be supplemented by drapes. Wearing this outfit gives the wearer an ambience of faith and trustworthiness, allowing her to convert others much easier.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Nun/NunA</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<equippedStatOffsets>
+			<NegotiationAbility>0.05</NegotiationAbility>
+			<ConversionPower MayRequire="Ludeon.RimWorld.Ideology">0.1</ConversionPower>
+		</equippedStatOffsets>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Nun/NunA</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+
+	<ThingDef ParentName="ApparelTorsoMBase">
+        <defName>NunB</defName>
+        <label>Nun - Torso B</label>
+        <description>Part of the Nun Series. An religious dress appropriate for most situations. Beside are leg windows that allow an extra range of motion. Wearing this outfit gives the wearer an ambience of faith and holiness, allowing her to suppress different kinds of evil.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Nun/NunB</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<equippedStatOffsets>
+			<NegotiationAbility>0.05</NegotiationAbility>
+			<ActivitySuppressionRate MayRequire="Ludeon.RimWorld.Anomaly">0.1</ActivitySuppressionRate>
+		</equippedStatOffsets>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Nun/NunB</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+	
+	<ThingDef ParentName="ApparelTorsoMBase">
+        <defName>NunC</defName>
+        <label>Nun - Torso C</label>
+        <description>Part of the Nun Series. A piece of garment that barely leaves anything to the imagination. It also works great with drapes. Wearing this outfit gives the wearer an ambience of faith and seduction, allowing her to convert others much more often.</description>
+        <graphicData>
+          <texPath>Things/Apparel/Nun/NunC</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<equippedStatOffsets>
+			<NegotiationAbility>0.05</NegotiationAbility>
+			<SocialIdeoSpreadFrequencyFactor MayRequire="Ludeon.RimWorld.Ideology">0.1</SocialIdeoSpreadFrequencyFactor>
+		</equippedStatOffsets>
+        <apparel>
+          <wornGraphicPath>Things/Apparel/Nun/NunC</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+        </apparel>
+    </ThingDef>
+
+    <ThingDef>
+        <thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<tickerType>Never</tickerType>
+		<defName>NunH</defName>
+        <label>Nun - Headwear</label>
+        <description>Part of the Nun Series. A small headwear that covers the hair and is used for religious ceremonies or daily life. It is particularly suited for worship, prayers, and meditation.</description>
+        <recipeMaker>
+          <researchPrerequisite>ComplexClothing</researchPrerequisite>
+        </recipeMaker>
+        <graphicData>
+          <texPath>Things/Apparel/Nun/NunH</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<equippedStatOffsets>
+			<NegotiationAbility>0.05</NegotiationAbility>
+			<PsychicSensitivity>100</PsychicSensitivity>
+		</equippedStatOffsets>
+        <costStuffCount>50</costStuffCount>
+        <stuffCategories>
+          <li>Fabric</li>
+        </stuffCategories>
+        <thingCategories>
+          <li>Apparel</li>
+        </thingCategories>
+        <statBases>
+          <MaxHitPoints>100</MaxHitPoints>
+          <WorkToMake>100</WorkToMake>
+          <Mass>0.1</Mass>
+          <StuffEffectMultiplierArmor>0.05</StuffEffectMultiplierArmor>
+          <StuffEffectMultiplierInsulation_Cold>0.02</StuffEffectMultiplierInsulation_Cold>
+          <StuffEffectMultiplierInsulation_Heat>0.01</StuffEffectMultiplierInsulation_Heat>
+          <EquipDelay>1</EquipDelay>
+        </statBases>
+		<equippedStatOffsets>
+			<ConversionPower MayRequire="Ludeon.RimWorld.Ideology">0.1</ConversionPower>
+		</equippedStatOffsets>
+        <apparel>
+          <bodyPartGroups>
+            <li>UpperHead</li>
+          </bodyPartGroups>
+          <wornGraphicPath>Things/Apparel/Nun/NunH</wornGraphicPath>
+		  <useWornGraphicMask>true</useWornGraphicMask>
+          <layers>
+            <li>Overhead</li>
+          </layers>
+          <tags>
+            <li></li>
+          </tags>
+          <defaultOutfitTags>
+            <li>Worker</li>
+            <li>Soldier</li>
+          </defaultOutfitTags>
+          <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		  <countsAsClothingForNudity>true</countsAsClothingForNudity>
+        </apparel>
+        <colorGenerator Class="ColorGenerator_StandardApparel" />
+    </ThingDef>
+	
+	<ThingDef>
+        <thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<tickerType>Never</tickerType>
+		<defName>NSlv</defName>
+        <label>Nun - Sleeves</label>
+        <description>Part of the Nun Series. A pair of sleeves wrapping around the back which provide extra coverage when using religious garments.</description>
+        <recipeMaker>
+          <researchPrerequisite>ComplexClothing</researchPrerequisite>
+        </recipeMaker>
+        <graphicData>
+          <texPath>Things/Apparel/Nun/Slv</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+		<equippedStatOffsets>
+			<NegotiationAbility>0.05</NegotiationAbility>
+		</equippedStatOffsets>
+        <costStuffCount>40</costStuffCount>
+        <stuffCategories>
+          <li>Fabric</li>
+        </stuffCategories>
+        <thingCategories>
+          <li>Apparel</li>
+        </thingCategories>
+        <statBases>
+          <MaxHitPoints>100</MaxHitPoints>
+          <WorkToMake>900</WorkToMake>
+          <Mass>0.1</Mass>
+          <StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
+          <StuffEffectMultiplierInsulation_Cold>0.075</StuffEffectMultiplierInsulation_Cold>
+          <StuffEffectMultiplierInsulation_Heat>0.03</StuffEffectMultiplierInsulation_Heat>
+          <EquipDelay>1</EquipDelay>
+        </statBases>
+        <apparel>
+          <bodyPartGroups>
+			<li>Arms</li>
+          </bodyPartGroups>
+          <wornGraphicPath>Things/Apparel/Nun/Slv</wornGraphicPath>
+		  <useWornGraphicMask>false</useWornGraphicMask>
+          <layers>
+            <li>Middle</li>
+          </layers>
+          <tags>
+            <li></li>
+          </tags>
+          <defaultOutfitTags>
+            <li>Worker</li>
+            <li>Soldier</li>
+          </defaultOutfitTags>
+          <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		  <countsAsClothingForNudity>true</countsAsClothingForNudity>
+        </apparel>
+        <colorGenerator Class="ColorGenerator_StandardApparel" />
+		<modExtensions>
+			<li Class="BodyTypeApparelRestrictions.ApparelBodyTypeExtension">
+			<allowedBodyTypes>
+				<li>Female</li>
+				<li>Thin</li>
+			</allowedBodyTypes>
+			</li>
+		</modExtensions>
+    </ThingDef>
+
+</Defs>
