@@ -69,7 +69,7 @@
           <li>Metallic</li>
         </stuffCategories>
 		<costList>
-			<Gold>100</Gold>
+			<Gold>10.0</Gold>
 		</costList>
 		<statBases>
 		  <Mass>2</Mass>

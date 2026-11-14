@@ -160,7 +160,7 @@
 			<SocialImpact>0.1</SocialImpact>
 		</equippedStatOffsets>
 		<costList>
-			<Gold>30</Gold>
+			<Gold>3.0</Gold>
 		</costList>
         <costStuffCount>20</costStuffCount>
         <stuffCategories>
@@ -201,7 +201,7 @@
 			<SlaveSuppressionOffset>0.2</SlaveSuppressionOffset>
 		</equippedStatOffsets>
 		<costList>
-			<Gold>10</Gold>
+			<Gold>1.0</Gold>
 		</costList>
         <costStuffCount>30</costStuffCount>
         <stuffCategories>
